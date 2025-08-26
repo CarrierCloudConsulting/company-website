@@ -1,50 +1,139 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="Carrier Cloud Consulting">
+	<main>
+		<!-- Hero Section -->
+		<section id="home" class="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 md:py-32 overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<div class="absolute w-96 h-96 bg-white/10 rounded-full top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+				<div class="absolute w-80 h-80 bg-white/10 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+			</div>
+			<div class="container mx-auto px-4 relative z-10 text-center">
+				<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+					<span class="block">Elevate Your Business to the Cloud</span>
+					<span class="block mt-2">with Carrier Cloud Consulting</span>
+				</h1>
+				<p class="text-lg sm:text-xl md:text-2xl font-light text-blue-100 mb-8 max-w-3xl mx-auto">
+					Expert Salesforce solutions for development, data migration, and advanced Revenue Cloud.
+				</p>
+				<a href="#contact" class="inline-block bg-white text-blue-600 font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition duration-300 transform hover:scale-105">
+					Get a Free Consultation
+				</a>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="py-16 md:py-24 bg-white">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Core Expertise</h2>
+				<p class="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
+					We specialize in delivering targeted, high-impact Salesforce solutions that drive growth and efficiency.
+				</p>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Salesforce Development Card -->
+					<div class="bg-gray-50 p-8 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition duration-300 transform hover:scale-105">
+						<div class="flex items-center justify-center icon mx-auto mb-6 bg-blue-100 text-blue-600 rounded-full">
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code">
+								<polyline points="16 18 22 12 16 6"></polyline>
+								<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Salesforce Development</h3>
+						<p class="text-gray-600">
+							Custom solutions and applications to extend the power of your Salesforce platform. We build what you need to streamline processes and maximize efficiency.
+						</p>
+					</div>
+					<!-- Salesforce Data Migrations Card -->
+					<div class="bg-gray-50 p-8 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition duration-300 transform hover:scale-105">
+						<div class="flex items-center justify-center icon mx-auto mb-6 bg-blue-100 text-blue-600 rounded-full">
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database">
+								<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+								<path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+								<path d="M3 12A9 3 0 0 0 21 12"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Salesforce Data Migrations</h3>
+						<p class="text-gray-600">
+							Seamless and secure data migration services. We ensure your critical data is accurately moved to Salesforce, with no disruption to your business.
+						</p>
+					</div>
+					<!-- Revenue Cloud Advanced Card -->
+					<div class="bg-gray-50 p-8 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition duration-300 transform hover:scale-105">
+						<div class="flex items-center justify-center icon mx-auto mb-6 bg-blue-100 text-blue-600 rounded-full">
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart">
+								<path d="M3 3v18h18"></path>
+								<path d="m18 10-5 5-2.5-2.5L7 17"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Revenue Cloud Advanced</h3>
+						<p class="text-gray-600">
+							Unlock the full potential of your revenue operations. Our experts implement and optimize Salesforce Revenue Cloud for complex billing, pricing, and CPQ needs.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Us Section -->
+		<section id="about" class="py-16 md:py-24 bg-gray-100">
+			<div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+				<div class="md:w-1/2">
+					<img src="https://placehold.co/800x600/e2e8f0/64748b?text=Professional+Team" alt="A team collaborating in a professional setting" class="w-full h-auto rounded-xl shadow-2xl">
+				</div>
+				<div class="md:w-1/2 text-center md:text-left">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Partner with Us?</h2>
+					<p class="text-gray-600 text-lg mb-6">
+						At Carrier Cloud Consulting, we believe in a client-first approach. Our team of certified Salesforce experts brings deep industry knowledge and a passion for solving complex business challenges. We don't just implement technology; we forge lasting partnerships, providing strategic guidance to ensure your success on the Salesforce platform.
+					</p>
+					<p class="text-gray-600 text-lg">
+						We are committed to delivering tailored solutions that align with your unique business goals, ensuring every project delivers tangible value and a significant return on your investment.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="py-16 md:py-24 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ready to Transform Your Business?</h2>
+					<p class="text-gray-600 text-lg mb-8">
+						Contact us today for a free consultation. Let's discuss how we can help you achieve your goals with Salesforce.
+					</p>
+					<form class="bg-gray-50 p-8 rounded-2xl shadow-xl border-2 border-transparent">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+							<div>
+								<label for="first-name" class="block text-left text-gray-700 font-medium mb-2">First Name</label>
+								<input type="text" id="first-name" name="first-name" placeholder="John" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" required>
+							</div>
+							<div>
+								<label for="last-name" class="block text-left text-gray-700 font-medium mb-2">Last Name</label>
+								<input type="text" id="last-name" name="last-name" placeholder="Doe" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" required>
+							</div>
+						</div>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+							<div>
+								<label for="email" class="block text-left text-gray-700 font-medium mb-2">Email Address</label>
+								<input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" required>
+							</div>
+							<div>
+								<label for="company" class="block text-left text-gray-700 font-medium mb-2">Company</label>
+								<input type="text" id="company" name="company" placeholder="" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+							</div>
+						</div>
+						<div class="mb-6">
+							<label for="message" class="block text-left text-gray-700 font-medium mb-2">Message</label>
+							<textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"></textarea>
+						</div>
+						<button type="submit" class="w-full bg-blue-600 text-white font-bold text-lg py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+							Send Message
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
